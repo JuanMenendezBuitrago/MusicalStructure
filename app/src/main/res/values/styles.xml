@@ -1,0 +1,85 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="circleButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginBottom">20dp</item>
+    </style>
+
+    <style name="albumCircleButton" parent="circleButton">
+    </style>
+
+    <style name="artistCircleButton" parent="circleButton">
+    </style>
+
+    <style name="songCircleButton" parent="circleButton">
+    </style>
+
+    <style name="listCircleButton" parent="circleButton">
+    </style>
+
+    <style name="text">
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:textColor">#000</item>
+    </style>
+
+    <style name="sectionHeader" parent="text">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginBottom">0dp</item>
+    </style>
+
+    <style name="sectionText" parent="text">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="sourceCode" parent="text">
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textColor">#666</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+    </style>
+
+    <style name="nowPlayingImage">
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="nowPlayingText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingLeft">8dp</item>
+    </style>
+
+    <style name="nowPlayingLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">0</item>
+    </style>
+
+    <style name="activityDescriptionText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+</resources>

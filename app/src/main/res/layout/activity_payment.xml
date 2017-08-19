@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="368dp"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteX="8dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/stripeLogo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-20dp"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:src="@drawable/stripe" />
+
+        <TextView
+            style="@style/sectionHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/installation" />
+
+        <TextView
+            style="@style/sectionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/installation_step_1" />
+
+        <TextView
+            style="@style/sourceCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/installation_step_1_code" />
+
+        <TextView
+            style="@style/sectionHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/use" />
+
+        <TextView
+            style="@style/sectionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/use_step_1" />
+
+        <TextView
+            style="@style/sourceCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/use_step_1_code" />
+
+
+        <TextView
+            style="@style/sectionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/use_step_2" />
+
+        <TextView
+            style="@style/sourceCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/use_step_2_code" />
+
+        <TextView
+            style="@style/sectionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/use_step_3" />
+
+        <TextView
+            style="@style/sourceCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/use_step_3_code" />
+
+        <TextView
+            style="@style/sectionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/use_step_4" />
+
+        <TextView
+            style="@style/sourceCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/use_step_4_code" />
+
+
+        <TextView
+            style="@style/sectionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/use_step_5" />
+
+
+        <TextView
+            style="@style/sourceCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/use_step_5_code" />
+
+        <TextView
+            style="@style/sectionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/use_step_6" />
+
+        <TextView
+            style="@style/sourceCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/use_step_6_code" />
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+

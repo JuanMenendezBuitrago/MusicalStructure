@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.musicalstructure.MainActivity">
+
+    <TextView
+        android:id="@+id/songTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="48sp"
+        android:text="@string/main_activity"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+
+    <LinearLayout
+        android:layout_above="@+id/paymentButton"
+        android:id="@+id/bottomRow"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/albumsButton"
+            android:text="@string/albums"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/artistsButton"
+            android:text="@string/artists"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_above="@id/bottomRow"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/songsButton"
+            android:text="@string/songs"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/playlistsButton"
+            android:text="@string/playlists"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:id="@id/paymentButton"
+        android:text="@string/payment_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

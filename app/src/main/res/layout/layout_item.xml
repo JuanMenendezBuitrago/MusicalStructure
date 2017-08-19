@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/itemLayout"
+    android:background="?android:attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/imageIcon"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/ic_image" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="4dp"
+        android:layout_toLeftOf="@+id/actionIcon"
+        android:layout_toRightOf="@id/imageIcon"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="Title"/>
+
+        <TextView
+            android:id="@+id/subtitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Subtitle" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@id/actionIcon"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="6dp"
+        android:src="@drawable/ic_chevron_right" />
+</RelativeLayout>

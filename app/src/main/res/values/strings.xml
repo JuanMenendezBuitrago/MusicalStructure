@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Musical Structure</string>
+    <string name="use_step_1_code">&lt;com.stripe.android.view.CardInputWidget\n
+        \t\t\tandroid:id=&quot;@+id/card_input_widget&quot;\n
+        \t\t\tandroid:layout_width=&quot;match_parent&quot;\n
+        \t\t\tandroid:layout_height=&quot;wrap_content&quot;/&gt;</string>
+    <string name="installation">Installation</string>
+    <string name="installation_step_1">For Android Studio users, installation only needs to include the following to the project\'s build.gradle file inside the dependencies section:</string>
+    <string name="installation_step_1_code">compile \'com.stripe:stripe-android:4.1.5</string>
+    <string name="use">Use</string>
+    <string name="use_step_1">The card input widget can be included in any layout file using the following piece of XML:</string>
+    <string name="use_step_2">To access the card reader in your application code you need to import the class</string>
+    <string name="use_step_2_code">import com.stripe.android.view.CardInputWidget;</string>
+    <string name="use_step_3">then find the card widget in the layout as usual</string>
+    <string name="use_step_3_code">CardInputWidget widget =   (CardInputWidget) findViewById(R.id.card_input_widget);</string>
+    <string name="use_step_4">and then you can ask the widget for a card object. If the data is either incomplete or not valid, this will return null.</string>
+    <string name="use_step_4_code">Card cardToSave = widget.getCard();  if (cardToSave == null) {  mErrorDialogHandler.showError(\"Invalid Card Data\");  }</string>
+    <string name="use_step_5">This card object holds sensitive payment information which will be exchanged for a token through Stripe\'s server. First you need to make some imports.</string>
+    <string name="use_step_5_code">import com.stripe.android.Stripe; import com.stripe.android.model.Token;</string>
+    <string name="use_step_6">And then you convert the Card data into a token.  NOTE: Do not store the token locally, but send it to your servers for processing instead.</string>
+    <string name="use_step_6_code">Stripe stripe = new Stripe(  mContext,  \"pk_test_6pRNASCoBOKtIshFeQd4XMUh\" ); stripe.createToken(  card,  new TokenCallback() {  public void onSuccess(Token token) {  // Send token to your server  }  public void onError(Exception error) {  // Show localized error message  Toast.makeText(  getContext(),  error.getLocalizedString(  getContext()  ),  Toast.LENGTH_LONG  ).show();  }  } )</string>
+    <string name="main_activity">Main activity</string>
+    <string name="albums">albums</string>
+    <string name="artists">artists</string>
+    <string name="songs">songs</string>
+    <string name="playlists">playlists</string>
+    <string name="payment_info">payment info</string>
+    <string name="description_hint">There should be a list here but only one item is shown for demonstration purposes.</string>
+</resources>
