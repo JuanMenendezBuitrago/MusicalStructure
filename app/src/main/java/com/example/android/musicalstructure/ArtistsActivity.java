@@ -13,13 +13,22 @@ import java.util.ArrayList;
 
 public class ArtistsActivity extends AppCompatActivity {
 
+    /** List of artists **/
     ArrayList<Artist> mArtists = new ArrayList<>();
-    String mDescription = "This is he artists list";
+
+    /** Activity's Label **/
+    String mLabel = "Artists screen";
+
+    /** Activity's description **/
+    String mDescription = "When clicking on the > button, the user is taken to the albums screen.";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
+
+        // set the required texts
+        ((TextView)findViewById(R.id.labelText)).setText(mLabel);
         ((TextView)findViewById(R.id.descriptionText)).setText(mDescription);
 
         MusicPlayer.getInstance().updateNowPlayingStatus(this);

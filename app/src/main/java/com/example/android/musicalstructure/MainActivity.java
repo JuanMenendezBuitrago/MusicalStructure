@@ -5,14 +5,26 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
+
+    /** Activity's Label **/
+    String mLabel = "Main screen";
+
+    /** Activity's description **/
+    String mDescription = "This is he main screen with buttons that link to other sections of " +
+            "the app.";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // set required screen
+        ((TextView)findViewById(R.id.labelText)).setText(mLabel);
+        ((TextView)findViewById(R.id.descriptionText)).setText(mDescription);
 
         // songs button
         Button songsButton = (Button) findViewById(R.id.songsButton);

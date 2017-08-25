@@ -8,9 +8,23 @@
     tools:layout_editor_absoluteY="0dp">
 
     <LinearLayout
+        android:id="@+id/paymentLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
         android:orientation="vertical">
+
+        <TextView
+            style="@style/activityLabelText"
+            android:id="@+id/labelText"
+            android:hint="@string/label_hint"/>
+
+        <TextView
+            style="@style/activityDescriptionText"
+            android:id="@+id/descriptionText"
+            android:hint="@string/description_hint"/>
+
 
         <ImageView
             android:id="@+id/stripeLogo"

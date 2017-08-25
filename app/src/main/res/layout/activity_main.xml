@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="12dp"
     tools:context="com.example.android.musicalstructure.MainActivity">
 
     <TextView
-        android:id="@+id/songTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="48sp"
-        android:text="@string/main_activity"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"/>
+        style="@style/activityLabelText"
+        android:id="@+id/labelText"
+        android:hint="@string/label_hint"/>
+
+    <TextView
+        style="@style/activityDescriptionText"
+        android:id="@+id/descriptionText"
+        android:hint="@string/description_hint"/>
 
     <LinearLayout
         android:layout_above="@+id/paymentButton"

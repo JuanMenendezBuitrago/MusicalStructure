@@ -15,13 +15,23 @@ import java.util.UUID;
 
 public class SongsActivity extends AppCompatActivity {
 
+    /** List of songs **/
     ArrayList<Song> mSongs = new ArrayList<>();
-    String mDescription = "This is the list of songs";
+
+    /** Activity's label **/
+    String mLabel = "Songs screen";
+
+    /** Activity's description **/
+    String mDescription = "When the user clicks on the > button, the app shows the song screen " +
+            "where there's a description an a play/pause button.";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
+
+        // set required texts
+        ((TextView)findViewById(R.id.labelText)).setText(mLabel);
         ((TextView)findViewById(R.id.descriptionText)).setText(mDescription);
 
         MusicPlayer.getInstance().updateNowPlayingStatus(this);

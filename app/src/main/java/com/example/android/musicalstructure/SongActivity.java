@@ -1,5 +1,7 @@
 package com.example.android.musicalstructure;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -18,7 +21,11 @@ public class SongActivity extends AppCompatActivity {
     MusicPlayer musicPlayer = MusicPlayer.getInstance();
 
     /** The activity's description **/
-    String mDescription = "This is the details for the chosen song ";
+    String mDescription = "This is the details for the chosen song with a 'play/pause' ImageButton " +
+            "and a 'home' button.";
+
+    /** Activity's Label **/
+    String mLabel = "Song screen";
 
     /** song object **/
     private Song mSong;
@@ -35,8 +42,12 @@ public class SongActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
 
+        // set required screen
+        ((TextView)findViewById(R.id.labelText)).setText(mLabel);
+        ((TextView)findViewById(R.id.descriptionText)).setText(mDescription);
+
         showDescription();
-        insertPlayPauseButton();
+        insertButtons();
         musicPlayer.updateNowPlayingStatus(this);
     }
 
@@ -56,7 +67,7 @@ public class SongActivity extends AppCompatActivity {
     /**
      * Inserts the play/pause ImageButton and attach the click event handler.
      */
-    private void insertPlayPauseButton() {
+    private void insertButtons() {
         // create ImageButton element
         mPlayPauseButton = new ImageButton(this);
         mPlayPauseButton.setBackgroundColor(Color.TRANSPARENT);
@@ -67,6 +78,20 @@ public class SongActivity extends AppCompatActivity {
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         getPixels(100))
         );
+
+        // create Button element
+        Button homeButton = new Button(this);
+        homeButton.setText("home");
+        homeButton.setLayoutParams(new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT));
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mainIntent = new Intent(SongActivity.this, MainActivity.class);
+                startActivity(mainIntent);
+            }
+        });
 
         // set click handler
         mPlayPauseButton.setOnClickListener(new View.OnClickListener() {
@@ -81,6 +106,7 @@ public class SongActivity extends AppCompatActivity {
         LinearLayout list = (LinearLayout) findViewById(R.id.listView);
         renderPlayButton();
         list.addView(mPlayPauseButton);
+        list.addView(homeButton);
     }
 
     /**

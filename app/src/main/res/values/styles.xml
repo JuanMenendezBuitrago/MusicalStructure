@@ -8,25 +8,6 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="circleButton">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_weight">1</item>
-        <item name="android:layout_marginBottom">20dp</item>
-    </style>
-
-    <style name="albumCircleButton" parent="circleButton">
-    </style>
-
-    <style name="artistCircleButton" parent="circleButton">
-    </style>
-
-    <style name="songCircleButton" parent="circleButton">
-    </style>
-
-    <style name="listCircleButton" parent="circleButton">
-    </style>
-
     <style name="text">
         <item name="android:layout_marginTop">8dp</item>
         <item name="android:layout_marginRight">16dp</item>
@@ -78,8 +59,17 @@
     <style name="activityDescriptionText">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_below">@id/labelText</item>
         <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="activityLabelText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textSize">32sp</item>
     </style>
 
 </resources>

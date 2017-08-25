@@ -18,9 +18,13 @@
             android:orientation="vertical">
 
             <TextView
+                style="@style/activityLabelText"
+                android:id="@+id/labelText"
+                android:hint="@string/label_hint"/>
+
+            <TextView
                 style="@style/activityDescriptionText"
-                android:id="@+id/descriptionText"
-                android:hint="@string/description_hint"/>
+                android:id="@+id/descriptionText"/>
 
             <LinearLayout
                 android:orientation="vertical"

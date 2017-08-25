@@ -13,14 +13,25 @@ import java.util.ArrayList;
 
 public class AlbumsActivity extends AppCompatActivity {
 
+    /** List of albums **/
     ArrayList<Album> mAlbums = new ArrayList<>();
-    String mDescription = "This is the list of albums";
+
+    /** Activity's label **/
+    String mLabel = "Albums screen";
+
+    /** Activity's description **/
+    String mDescription = "Each album has a set of songs. There could be a 'play' button here " +
+            "but for simplicity's sake, when the user clicks on the > button, the user is taken to " +
+            "the songs screen.";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
+
+        // Set the required texts
         ((TextView)findViewById(R.id.descriptionText)).setText(mDescription);
+        ((TextView)findViewById(R.id.labelText)).setText(mLabel);
 
         MusicPlayer.getInstance().updateNowPlayingStatus(this);
 

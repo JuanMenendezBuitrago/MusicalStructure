@@ -26,4 +26,5 @@
     <string name="playlists">playlists</string>
     <string name="payment_info">payment info</string>
     <string name="description_hint">There should be a list here but only one item is shown for demonstration purposes.</string>
+    <string name="label_hint">Label goes here</string>
 </resources>

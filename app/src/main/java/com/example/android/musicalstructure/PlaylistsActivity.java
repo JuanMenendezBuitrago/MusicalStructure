@@ -13,13 +13,24 @@ import java.util.ArrayList;
 
 public class PlaylistsActivity extends AppCompatActivity {
 
+    /** List of playlists **/
     ArrayList<Playlist> mPlaylists = new ArrayList<>();
-    String mDescription = "This is the list of playlists";
+
+    /** Activity's label **/
+    String mLabel = "Playlists screen";
+
+    /** Activity's description **/
+    String mDescription = "Each playlist has a set of songs. There could be a 'play' button here " +
+            "but for simplicity's sake, when the user clicks on the > button, the user is taken to " +
+            "the songs screen.";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
+
+        // set required screen
+        ((TextView)findViewById(R.id.labelText)).setText(mLabel);
         ((TextView)findViewById(R.id.descriptionText)).setText(mDescription);
 
         MusicPlayer.getInstance().updateNowPlayingStatus(this);
